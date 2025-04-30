@@ -1,0 +1,122 @@
+/* style.css */
+body {
+    margin: 0;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    background-color: #1e1e1e;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 2;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    gap: 8px;
+}
+
+.dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dots button.active,
+.dots button:hover {
+    background-color: #fff;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .slider {
+        max-width: 90vw;
+    }
+
+    .arrow {
+        padding: 8px;
+        font-size: 20px;
+    }
+
+    .dots {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider {
+        max-width: 100vw;
+        border-radius: 0;
+    }
+
+    .arrow {
+        padding: 6px;
+        font-size: 18px;
+    }
+
+    .dots button {
+        width: 8px;
+        height: 8px;
+    }
+}

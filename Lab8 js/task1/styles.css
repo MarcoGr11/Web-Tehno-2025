@@ -1,0 +1,152 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1e1e2f;
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 10px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.settings, .info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #2e2e3e;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.settings label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 500;
+}
+
+select {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #333;
+    color: #eee;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+#restartBtn {
+    margin-top: 10px;
+    background-color: #607d8b;
+}
+
+#restartBtn:hover {
+    background-color: #455a64;
+}
+
+.info span {
+    background: #444;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-gap: 15px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    perspective: 1000px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 0.6s ease;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+}
+
+.card.open .card-inner, .card.matched .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    border-radius: 10px;
+}
+
+.card-front {
+    background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+    transform: rotateY(180deg);
+    color: #eee;
+    box-shadow: inset 0 0 5px rgba(255,255,255,0.05);
+}
+
+.card-back {
+    background-color: #1e2a3a;
+    color: #ff4081;
+    font-size: 32px;
+}
+
+.card.success .card-front {
+    background-color: #388e3c;
+    color: #ffffff;
+}
+
+.card.fail .card-front {
+    background-color: #d32f2f;
+    color: #ffffff;
+}
