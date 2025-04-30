@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список товарів</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        #product-form label {
+            display: block;
+            margin-bottom: 1rem;
+        }
+        #product-form input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.25rem;
+            box-sizing: border-box;
+        }
+        #product-form button {
+            width: 100%;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Каталог товарів</h1>
+    <div class="total-price">Загальна вартість: <span id="total-price">0 грн</span></div>
+</header>
+
+<main>
+    <section id="filters">
+        <h2>Фільтрація за категорією</h2>
+        <div id="filter-buttons"></div>
+        <button id="reset-filter">Скинути фільтр</button>
+    </section>
+
+    <section id="sort">
+        <h2>Сортування</h2>
+        <button id="sort-price">Сортувати за ціною</button>
+        <button id="sort-created">Сортувати за датою створення</button>
+        <button id="sort-updated">Сортувати за датою оновлення</button>
+        <button id="reset-sort">Скинути сортування</button>
+    </section>
+
+    <section id="product-list-section">
+        <div id="empty-message">Наразі список товарів пустий. Додайте новий товар.</div>
+        <div id="product-list" class="product-list"></div>
+        <button id="add-product-btn">Додати новий товар</button>
+    </section>
+</main>
+
+<div id="modal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-btn" id="close-modal">&times;</span>
+        <h2 id="modal-title">Додати новий товар</h2>
+        <form id="product-form">
+            <label>
+                Назва товару:
+                <input type="text" name="name" required />
+            </label>
+            <label>
+                Ціна (грн):
+                <input type="number" name="price" min="0" required />
+            </label>
+            <label>
+                Категорія:
+                <input type="text" name="category" placeholder="Наприклад: Смартфони" required />
+            </label>
+            <label>
+                Зображення (URL):
+                <input type="url" name="image" required />
+            </label>
+            <label>
+                Посилання на товар:
+                <input type="url" name="link" placeholder="https://bigmag.ua/product/iphone13" required />
+            </label>
+            <button type="submit">Зберегти</button>
+        </form>
+    </div>
+</div>
+
+<div id="snackbar"></div>
+
+<script src="index.js"></script>
+</body>
+</html>
