@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Облік продуктів</title>
+  <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+<div class="wrapper">
+  <h1>Каталог продуктів</h1>
+
+  <div class="form-group">
+    <input type="text" id="name" placeholder="Назва продукту">
+    <input type="number" id="price" placeholder="Ціна">
+    <input type="number" id="quantity" placeholder="Кількість">
+    <button onclick="addProduct()">Додати продукт</button>
+  </div>
+
+  <div class="form-group">
+    <input type="text" id="searchName" placeholder="Пошук продукту за назвою">
+    <button onclick="searchProduct()">Пошук</button>
+  </div>
+
+  <div class="form-group">
+    <input type="text" id="orderName" placeholder="Назва продукту для замовлення">
+    <input type="number" id="orderQty" placeholder="Кількість для замовлення">
+    <button onclick="placeOrder()">Оформити замовлення</button>
+  </div>
+
+  <div class="form-group">
+    <button onclick="viewOrders()">Переглянути замовлення</button>
+  </div>
+
+  <ul id="productList"></ul>
+
+  <h2>Результат пошуку:</h2>
+  <div id="searchResult"></div>
+
+  <h2>Список замовлень:</h2>
+  <ul id="orderList"></ul>
+</div>
+
+<script src="script4.js"></script>
+</body>
+</html>
+

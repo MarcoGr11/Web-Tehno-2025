@@ -1,0 +1,53 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 2rem;
+}
+
+.traffic-light {
+    width: 100px;
+    margin: 2rem auto;
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.light {
+    width: 60px;
+    height: 60px;
+    margin: 10px auto;
+    border-radius: 50%;
+    background-color: #555;
+    opacity: 0.3;
+    transition: opacity 0.5s, box-shadow 0.5s;
+}
+
+.red.active {
+    background-color: red;
+    opacity: 1;
+    box-shadow: 0 0 20px red;
+}
+
+.yellow.active {
+    background-color: yellow;
+    opacity: 1;
+    box-shadow: 0 0 20px yellow;
+}
+
+.green.active {
+    background-color: green;
+    opacity: 1;
+    box-shadow: 0 0 20px green;
+}
+
+.controls button {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+#status {
+    font-weight: bold;
+    font-size: 1.2rem;
+}

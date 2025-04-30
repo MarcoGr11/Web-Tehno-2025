@@ -1,0 +1,39 @@
+body {
+    font-family: sans-serif;
+    padding: 2rem;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+.clock {
+    font-size: 2rem;
+    font-weight: bold;
+    background: black;
+    color: lime;
+    padding: 1rem 2rem;
+    display: inline-block;
+    border-radius: 10px;
+    letter-spacing: 2px;
+}
+
+#countdown, #calendarOutput, #birthdayOutput {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+input[type="date"], input[type="datetime-local"], input[type="month"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
